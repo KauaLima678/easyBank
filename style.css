@@ -1,0 +1,239 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 8rem;
+    padding-bottom: 20px;
+    background-color: hsl(0, 0%, 100%);
+    position: relative;
+    z-index: 10;
+
+    nav{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        a{
+            position: relative;
+            text-decoration: none;
+            color: hsl(233, 8%, 62%);
+            transition: .5s ease;
+            cursor: pointer;
+            
+            &:hover{
+                color: #000;
+            }
+        }
+    }
+
+      .button{
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+        padding: 15px 25px;
+        background: linear-gradient(to right, hsl(136, 65%, 51%) 10%, hsl(192, 70%, 51%) 80%);
+        border-radius: 40px;
+        font-weight: 700;
+        transition: .5s;
+
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+}
+
+header nav a::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    background: linear-gradient(to right, hsl(136, 65%, 51%) 10%, hsl(192, 70%, 51%) 50%);
+    height: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s ease;
+}
+
+header a:hover::after{
+    width: 100%;
+}
+
+.hero{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    justify-content: space-between;
+    padding-left: 8rem;
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+
+        .button{
+            margin-top: 20px;
+        }
+
+        a{
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+        padding: 15px 25px;
+        background: linear-gradient(to right, hsl(136, 65%, 51%) 10%, hsl(192, 70%, 51%) 80%);
+        border-radius: 40px;
+        font-weight: 700;
+        transition: .5s;
+
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+
+        h1{
+            font-size: 4rem;
+            font-weight: 400;
+            color: hsl(233, 26%, 24%);
+        }
+
+        p{
+            width: 550px;
+            font-size: 1.3rem;
+            color: hsl(233, 8%, 62%);
+        }
+    }
+
+    .images{
+        position: relative;
+        width: 100%;
+
+        .shape{
+            position: absolute;
+            right: -30%;
+            top: -27%;
+            width: 1070px;
+            z-index: -1;
+        }
+        .mockup{
+            position: absolute;
+            right: -16%;
+            top: -15%;
+            z-index: 1;
+            width: 800px;
+        }
+    }
+}
+
+.containerCuriosidades {
+    background-color: hsl(220, 16%, 96%);
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 8rem;
+    gap: 55px;
+
+    .tituloCaixa {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+         margin-bottom: 40px;
+
+        h2 {
+            font-size: 35px;
+            font-weight: 400;
+            color: hsl(233, 26%, 24%);
+        }
+
+        span {
+            color: hsl(233, 11%, 42%);
+            font-size: 18px;
+            width: 50%;
+        }
+    }
+
+    .containerItens {
+        display: flex;
+        flex-direction: row;
+
+        .gridCuriosidades {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 45px;
+
+            .caixa {
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+
+                img {
+                    object-fit: cover;
+                    max-width: 100px;
+                    width: 100%;
+                }
+
+                .textoCaixa {
+                    display: flex;
+                    gap: 30px;
+                    flex-direction: column;
+
+                    h4 {
+                        color: hsl(233, 26%, 24%);
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                    }
+
+                    p {
+                        color: hsl(233, 11%, 42%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.latest{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 5rem 8rem;
+
+    .gridLatest{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .latestCard{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 240px;
+        }
+
+        .textLatest{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            span{
+                font-size: 14px;
+                color: hsl(233, 8%, 62%);
+            }
+
+            h2{
+                font-weight: 400;
+                color: hsl(233, 26%, 24%);
+            }
+        }
+    }
+}
